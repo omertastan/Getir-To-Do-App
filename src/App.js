@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "rebass";
+import Header from "./components/header";
+import { ThemeProvider } from "styled-components";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { GlobalStyle, theme } from "./theme";
+import TodoList from "./components/todo-list";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <ToastContainer autoClose={3000} />
+      <Box
+        minWidth="100vw"
+        minHeight="100vh"
+        width={1}
+        css={{
+          background: "#eea29a",
+        }}
+      >
+        <GlobalStyle />
+        <Header />
+        <Box maxWidth={1000} px={20} width={1} m="0 auto">
+          <TodoList />
+        </Box>
+      </Box>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
