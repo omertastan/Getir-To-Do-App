@@ -17,7 +17,7 @@ For the backend, I have used nodeJS and expressJS. You can see the node-api
 - React/Bootstrap
 - Redux / Saga
 
-### ✨ [Live Demo](https://enigmatic-springs-70849.herokuapp.com)
+### ✨ [Live Demo]()
 
 ## Authors
 
